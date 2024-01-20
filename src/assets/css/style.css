@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #c6c6fe;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-shadow: 2px 7px 9px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.header .date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day_of_week {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.numJobs {
+    color: #a8a9ca;
+}
+
+.form {
+    margin-top: 15px;
+    position: relative;
+}
+
+.form input {
+    width: 80%;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 2px solid #a8a9ca;
+}
+
+.form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 50px;
+    font-size: 15px;
+    background-color: #fb6869;
+    color: white;
+    cursor: pointer;
+}
+
+.jobs {
+    margin-top: 20px;
+    max-height: 500px;
+    overflow: auto; 
+    position: relative;
+}
+
+.jobs::-webkit-scrollbar {
+    width: 6px;
+}
+
+.jobs::-webkit-scrollbar-thumb {
+    background-color: #ff5945;
+}
+.job {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.job__delete-icon {
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.job__delete-icon:hover {
+    color: #fb6869;
+}
+
+.checkbox {
+    width: 14px ;
+    height: 14px;
+    border: 1px solid #a8a9ca;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1;
+    color: white;
+    margin-left: 10px;
+}
+
+.checkbox .trash {
+    background-color: #fb6869;
+}
+
+.job__name {
+    color: #82829c;
+    margin-left: 10px;
+    font-size: 18px;
+    /* flex-grow: 1; */
+}
+
+.job__name.done {
+    text-decoration: line-through;
+}
+
+.time-create {
+    font-size: 14px;
+    color: #bebfc1;
+    margin-left: auto;
+    padding-right: 10px;
+    text-align: right;
+    width: 100px;
+}
