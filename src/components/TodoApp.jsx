@@ -1,14 +1,11 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
 uuidv4();
 
 export default function TodoApp() {
-    const [todos, setTodos] = useState([]);
-    useEffect(() => {
-        setTodos(JSON.parse(localStorage.getItem("todolist")) || []);
-    }, []);
+    const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todolist")) || []);
     const numOfJob = todos.filter(todo => todo.done === false).length;
 
     const addTodo = (job) => {
